@@ -68,7 +68,7 @@ template = pn.template.FastListTemplate(
     title = 'World CO2 Emission Dashboard',
     sidebar = [pn.pane.Markdown('# CO2 Emissions and Climate Change'),
                pn.pane.Markdown('#### CO2 emissions are the primary driver of global climate change'),
-               pn.pane.PNG('https://raw.githubusercontent.com/sihlemsk/co2_dashboard/master/Climate-Change-Transparent.png', sizing_model = 'scale_both'),
+               pn.pane.PNG('https://raw.githubusercontent.com/sihlemsk/co2_dashboard/master/Climate-Change-Transparent.png', sizing_mode='scale_both'),
                pn.pane.Markdown('## Settings'),
                year_slider],
     main=[pn.Row(pn.Column(yaxis_co2, 
