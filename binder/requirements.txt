@@ -1,4 +1,0 @@
-pandas
-panel
-jupyter_bokeh
-hvplot
