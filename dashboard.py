@@ -67,5 +67,17 @@ co2_table = co2_pipeline.pipe(pn.widgets.Tabulator, pagination='remote', page_si
 template = pn.template.FastListTemplate(
     title = 'World CO2 Emission Dashboard',
     sidebar = [pn.pane.Markdown('# CO2 Emissions and Climate Change'),
-               pn.pane.Markdown()]
+               pn.pane.Markdown('#### CO2 emissions are the primary driver of global climate change'),
+               pn.pane.PNG('https://raw.githubusercontent.com/sihlemsk/co2_dashboard/master/Climate-Change-Transparent.png', sizing_model = 'scale_both'),
+               pn.pane.Markdown('## Settings'),
+               year_slider],
+    main=[pn.Row(pn.Column(yaxis_co2, 
+                           co2_plot.panel(width=700), margin=(0,25)), 
+                 co2_table.panel(width=500)), 
+          pn.Row(pn.Column(co2_vs_gdp_scatterplot.panel(width=600), margin=(0,25)), 
+                 pn.Column(yaxis_co2_source, co2_source_bar_plot.panel(width=600)))],
+    accent_base_color="#88d8b0",
+    header_background="#88d8b0",
 )
+
+template.show()
