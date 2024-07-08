@@ -80,4 +80,4 @@ template = pn.template.FastListTemplate(
     header_background="#88d8b0",
 )
 
-template.show()
+pn.serve(template)
