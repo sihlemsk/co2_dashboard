@@ -1,6 +1,5 @@
 name: co2_dashboard
 channels:
-  - defaults
   - conda-forge
 dependencies:
   - python=3.10
@@ -8,3 +7,6 @@ dependencies:
   - numpy
   - panel
   - hvplot
+  - pip
+  - pip:
+    - bokeh
