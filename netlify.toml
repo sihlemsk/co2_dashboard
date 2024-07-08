@@ -1,0 +1,8 @@
+[build]
+  publish = "public"
+  command = "panel serve dashboard.py --address 0.0.0.0 --allow-websocket-origin='*' --port $PORT"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
